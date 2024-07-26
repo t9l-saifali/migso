@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.migo-table-common table {
+  border: 0px;
+  width:100% !important;
+}
+
+.migo-table-common table thead{position:sticky !important; top:0px !important;}
+
+
+.migo-table-common table th {
+  background-color: #e5f5eb !important;
+  font-size: 16px;
+  color: #3d3d3d !important;
+  padding: 20px 10px !important;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.migo-table-common table tr:nth-child(odd) td {
+  background-color: #f6fbf7;
+  border: 0px;
+  padding: 10px 10px !important;
+  color: #838383 !important;
+}
+
+.migo-table-common table tr:nth-child(even) td {
+  background-color: #ecf7ef;
+  border: 0px;
+  padding: 10px 10px !important;
+  color: #838383 !important;
+}
+
+.migo-table-common table input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #53BE7A;
+}
+
+
+.data-edit-row{display:flex; display:-webkit-box; display:-webkit-flex; display:-moz-flex; display: -ms-flex;flex-flow:wrap; justify-content: space-between;}
+
+.edit-left-col{width:49%;}
+.edit-right-col{width:49%;}
+.loaderr>div{margin: 0 auto !important;}
+
+.data-edit-row p {    width: 100%;     margin: 0px 0px 5px 0px;}
+.data-edit-row p span{    display: block;  overflow: hidden;  white-space: nowrap;  max-width: 120px;
+  text-overflow: ellipsis;  width: 100%;}
+.edit-left-col{text-align:left; width:50%; padding-right:10px; box-sizing: border-box;}
+.edit-left-col span {    display: block;    text-align: left;    width: 100%;}
+.data-edit-row input{margin:0px;}
+
+.edit-right-col{text-align:left; width:50%; padding-left:10px; box-sizing: border-box;}
+.edit-right-col span{display: block;    text-align: left;    width: 100%;}
+.data-edit-row input{margin:0px;}
+.migo-table-common table tbody td input {    margin: 0 !important;}
+.migo-table-common table input[type=checkbox] {    width: 14px;    height: 14px;}
+.migo-table-common table th:nth-child(1)>div {    text-align: left;}
+.migo-table-common table th:nth-child(1)>div span{display:block;width:100%;}
+.migo-table-common table th:nth-child(2)>div {    text-align: left;}
+.migo-table-common table th:nth-child(2)>div span{display:block;width:100%;}
+.migo-table-common table th {    vertical-align: top;}
+.migo-table-common table th{font-size:14px;  vertical-align: top;    padding: 10px !important;}
+.tbox-col p {  margin: 0px 0px 5px 0px;}
+.tbox-col{width:60px;}
+.tbox-col input{margin:0px;}

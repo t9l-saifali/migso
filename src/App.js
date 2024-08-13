@@ -12,11 +12,11 @@ const App = () => {
   function receiveMessage(event) {
   const receivedData = event.data;
   // console.log('Data received in iframe:', receivedData);
-  if(receivedData?.salesforceData?.newObj){
-    setNewObj(receivedData?.salesforceData?.newObj)
-    setExistField(receivedData?.salesforceData?.existField)
+  if(receivedData?.salesforceData){
+    setNewObj(JSON.parse(receivedData?.salesforceData)?.newObj)
+    setExistField(JSON.parse(receivedData?.salesforceData)?.existField)
   }
-  // else if(receivedData?.salesforceData?.deployClicked){
+  // else if(JSON.parse(receivedData?.salesforceData)?.deployClicked){
   //   const parentWindow = window.parent;
   //   parentWindow.postMessage({ from: 'iframe', newObj: newObj }, '*');
   // }
@@ -26,7 +26,7 @@ const App = () => {
 useEffect(() => {
   const receiveMessage = (event) => {
     const receivedData = event.data;
-    if (receivedData?.salesforceData?.deployClicked) {
+    if (receivedData?.salesforceData && JSON.parse(receivedData?.salesforceData)?.deployClicked) {
       console.log("Sending data to Salesforce");
       const parentWindow = window.parent;
       let arr = [];

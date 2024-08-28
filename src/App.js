@@ -11,10 +11,12 @@ const App = () => {
     window.addEventListener('message', receiveMessage, false);
   function receiveMessage(event) {
   const receivedData = event.data;
-  // console.log('Data received in iframe:', receivedData);
+  console.log('Data received in iframe:', receivedData);
   if(receivedData?.salesforceData){
-    setNewObj(JSON.parse(receivedData?.salesforceData)?.newObj)
-    setExistField(JSON.parse(receivedData?.salesforceData)?.existField)
+    if(JSON.parse(receivedData?.salesforceData)?.newObj){
+      setNewObj(JSON.parse(receivedData?.salesforceData)?.newObj)
+      setExistField(JSON.parse(receivedData?.salesforceData)?.existField)
+    }
   }
   // else if(JSON.parse(receivedData?.salesforceData)?.deployClicked){
   //   const parentWindow = window.parent;

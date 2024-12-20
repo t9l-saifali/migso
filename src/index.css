@@ -55,6 +55,7 @@ code {
 .edit-left-col{width:49%;}
 .edit-right-col{width:49%;}
 .loaderr>div{margin: 0 auto !important;}
+.loaderr{margin-top: 150px;}
 
 .data-edit-row p {    width: 100%;     margin: 0px 0px 5px 0px;}
 .data-edit-row p span{    display: block;  overflow: hidden;  white-space: nowrap;  max-width: 120px;

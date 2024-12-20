@@ -494,7 +494,7 @@ useEffect(() => {
       ))}
     </tbody>
       </table> : <div className='loaderr'>
-      <ReactLoading type={'balls'} color={'#56104F'} height={667} width={375} />
+      <ReactLoading type={'balls'} color={'#56104F'} height={20} width={100} />
       </div>}
     </div>
   );

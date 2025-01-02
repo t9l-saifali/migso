@@ -11,7 +11,7 @@ const App = () => {
     window.addEventListener('message', receiveMessage, false);
   function receiveMessage(event) {
   const receivedData = event.data;
-  console.log('Data received in iframe:', receivedData);
+  // console.log('Data received in iframe:', receivedData);
   if(receivedData?.salesforceData){
     if(JSON.parse(receivedData?.salesforceData)?.newObj){
       setNewObj(JSON.parse(receivedData?.salesforceData)?.newObj)
@@ -29,7 +29,7 @@ useEffect(() => {
   const receiveMessage = (event) => {
     const receivedData = event.data;
     if (receivedData?.salesforceData && JSON.parse(receivedData?.salesforceData)?.deployClicked) {
-      console.log("Sending data to Salesforce");
+      // console.log("Sending data to Salesforce");
       const parentWindow = window.parent;
       let arr = [];
       for (let p of newObjRef.current) {
@@ -78,7 +78,7 @@ useEffect(() => {
       setExistField([...exitsarr])
       }
       catch(err){
-          console.log(err)
+          // console.log(err)
       }
   };
 
@@ -109,7 +109,7 @@ useEffect(() => {
       setExistField([...exitsarr])
       }
       catch(err){
-          console.log(err)
+          // console.log(err)
       }
   };
 
@@ -157,7 +157,7 @@ useEffect(() => {
           })
           setExistField([...exitsarr])
     } catch (err) {
-      console.log(err)
+      // console.log(err)
     }
   };
 
@@ -201,7 +201,7 @@ useEffect(() => {
       setExistField([...exitsarr])
       }
       catch(err){
-          console.log(err)
+          // console.log(err)
       }
   };
   const newHandleAllReadCoulouWise = (event, SelectedField) => {
@@ -239,7 +239,7 @@ useEffect(() => {
   setAllRead(arr.every((cc)=>cc.allRead))
   }
   catch(err){
-      console.log(err)
+      // console.log(err)
   }  };
   const newHandleAllEditCoulouWise = (event, SelectedField) => {
     try{
@@ -276,7 +276,7 @@ useEffect(() => {
  setAllRead(arr.every(cc => cc.allRead))
  }
  catch(err){
-     console.log(err)
+    //  console.log(err)
  }
   };
   const newHandleAllEditRowWise = (event, SelectedProfile) => {
@@ -314,7 +314,7 @@ useEffect(() => {
       setExistField([...exitsarr])
       }
       catch(err){
-          console.log(err)
+          // console.log(err)
       }
   };
   const newHandleAllReadRowWise = (event, SelectedProfile) => {
@@ -353,7 +353,7 @@ useEffect(() => {
   setExistField([...exitsarr])
   }
   catch(err){
-      console.log(err)
+      // console.log(err)
   }
   };
 
